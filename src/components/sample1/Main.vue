@@ -1,19 +1,29 @@
 <script setup lang="ts">
 import Section1 from './Section1.vue';
+import Section2 from './Section2.vue';
+import Section3 from './Section3.vue';
+import Section4 from './Section4.vue';
 </script>
 
 <template>
   <main>
-    <div class="container">
-      <div>
-        <img src="@/assets/images/home-background.jpg" alt="home-background" />
-      </div>
+    <div class="fixed top-20 left-0 w-full h-screen z-[-1]">
+      <img
+        class="w-full h-screen object-cover"
+        src="@/assets/images/home-background.jpg"
+        alt="home-background"
+      />
+    </div>
+    <div id="sectionContainer" class="relative top-20 left-0">
       <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
     </div>
   </main>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 main {
   position: absolute;
   top: 50px;
@@ -50,4 +60,4 @@ main {
   z-index: 0;
   content: '';
 }
-</style>
+</style> -->

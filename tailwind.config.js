@@ -4,7 +4,17 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#838383',
+        secondary: '#474554',
+        tertiary: '#ACA7CB',
+        light: '#FAF7FF',
+      },
+      backgroundImage: {
+        home: 'url("@/assets/images/home-background.jpg")',
+      },
+    },
   },
   plugins: [],
 };

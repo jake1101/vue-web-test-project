@@ -1,21 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-let isOn = ref(false);
+import { RouterLink } from 'vue-router';
+let isHidden = ref(true);
 
-const onClick = () => (isOn.value = !isOn.value);
+const style = 'px-2 py-2 bg-black rounded opacity-30 text-white';
+
+const onClick = () => (isHidden.value = !isHidden.value);
 </script>
 
 <template>
-  <div>
-    <button @click="onClick">nav</button>
-    <nav :class="{ on: isOn }">
+  <div class="fixed top-3 right-3 z-50 flex gap-3">
+    <nav :class="['flex gap-3', style, { hidden: isHidden }]">
       <RouterLink to="/" @click="onClick">Home</RouterLink>
       <RouterLink to="/sample1" @click="onClick">Sample1</RouterLink>
       <RouterLink to="/sample2" @click="onClick">Sample2</RouterLink>
     </nav>
+    <button :class="style" @click="onClick">nav</button>
   </div>
 </template>
-<style scoped>
+<!-- <style scoped>
 div {
   position: fixed;
   right: 5%;
@@ -59,4 +62,4 @@ nav.on {
 a {
   color: #fff;
 }
-</style>
+</style> -->

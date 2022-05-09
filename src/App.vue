@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 import FloatingNav from '@/components/FloatingNav.vue';
 // import HelloWorld from '@/components/HelloWorld.vue'
 </script>

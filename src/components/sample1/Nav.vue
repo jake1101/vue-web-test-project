@@ -1,36 +1,37 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-const navItemClass = 'text-neutral-300';
+const itemStyle =
+  'text-light text-xl  border-b border-transparent hover:text-tertiary hover:border-b hover:border-tertiary transition-color duration-200';
 const navItemList = [
   {
     id: 'nav_1',
-    href: '#1',
+    href: '#section1',
     text: 'nav1',
-    class: navItemClass,
+    class: itemStyle,
   },
   {
     id: 'nav_2',
-    href: '#2',
+    href: '#section2',
     text: 'nav2',
-    class: navItemClass,
+    class: itemStyle,
   },
   {
     id: 'nav_3',
-    href: '#3',
+    href: '#section3',
     text: 'nav3',
-    class: navItemClass,
+    class: itemStyle,
   },
   {
     id: 'nav_4',
-    href: '#4',
+    href: '#section4',
     text: 'nav4',
-    class: navItemClass,
+    class: itemStyle,
   },
   {
     id: 'nav_5',
-    href: '#5',
+    href: '#section5',
     text: 'nav5',
-    class: navItemClass,
+    class: itemStyle,
   },
 ];
 const navRef = ref();
@@ -40,20 +41,20 @@ const onClick = (e: Event) => {
   const navContainer = navRef.value as Element;
 
   Array.from(navContainer.children).forEach((el) => {
-    // if (!(a instanceof HTMLAnchorElement)) return;
-    let a = el;
-    while (!(a instanceof HTMLAnchorElement))
-      a = a.children[0] as HTMLAnchorElement;
+    if (!(el instanceof HTMLAnchorElement)) return;
 
-    a.href === current.href
-      ? a.classList.add('active')
-      : a.classList.remove('active');
+    el.href === current.href
+      ? el.classList.add('active')
+      : el.classList.remove('active');
   });
 };
 </script>
 
 <template>
-  <nav ref="nav" class="w-screen h-24 bg-neutral-900">
+  <nav
+    ref="navRef"
+    class="container h-full flex justify-center items-center gap-10"
+  >
     <a
       v-for="(a, index) in navItemList"
       :id="a.id"
