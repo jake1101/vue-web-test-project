@@ -17,5 +17,10 @@ const containerStyle =
   <div :class="[btnStyle, { [isClicked]: true }]" @click="onClick">
     <button class="p-3">contact</button>
   </div>
-  <div :class="[containerStyle, { hidden: isHidden }]">문의하기 페이지</div>
+  <div :class="[containerStyle, { hidden: isHidden }]">
+    <div class="flex justify-end">
+      <button @click="onClick">닫기</button>
+    </div>
+    <div>문의하기 팝업</div>
+  </div>
 </template>

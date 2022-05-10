@@ -5,8 +5,8 @@ import Rellax from 'rellax';
 const props = defineProps(['id', 'speed']);
 
 onMounted(() => {
-  const container = document.getElementById('sectionContainer');
-  const section = document.getElementById('section' + props.id);
+  const container = document.getElementById('sectionContainer')!;
+  const section = document.getElementById('section' + props.id)!;
   const topList = Array.from(container.children)
     .filter((el) => {
       if (!(el instanceof HTMLElement)) return null;
@@ -18,23 +18,44 @@ onMounted(() => {
     .map((el, idx) => (idx === 0 ? 0 : el.clientHeight));
   const topHeight = topList.reduce((pre, cur) => pre + cur, 0);
 
-  let rellax;
+  let rellax: any;
   window.addEventListener('scroll', () => {
     if (rellax) return;
     if (window.scrollY > topHeight) {
-      rellax = new Rellax('.rellax' + props.id);
+      rellax = new Rellax('.rellax' + props.id, {
+        wrapper: '#section' + props.id,
+        relativeToWrapper: true,
+      });
     }
   });
 });
-
-const style =
-  'bg-[url("@/assets/images/section4-background.jpg")] w-full h-screen bg-cover';
 </script>
 <template>
-  <div class="absolute bottom-0 left-0 w-full z-[-1]">
+  <div
+    :class="[
+      'absolute top-0',
+      // { ['top-[-100%]']: speed < 0 ? true : false },
+      // { ['top-0']: speed > 0 ? true : false },
+
+      'left-0 w-full h-[200%] z-[-1]',
+    ]"
+  >
     <div
-      :class="[{ ['rellax' + props.id]: true }, style]"
+      :class="[
+        {
+          ['rellax' + id]: true,
+        },
+        'bg-[url(@/assets/images/section4-background.jpg)] bg-contain w-full h-full',
+      ]"
       :data-rellax-speed="speed"
     ></div>
+    <!-- <div
+      :class="[
+        { ['rellax' + props.id]: true },
+        'bg-[url(@/assets/images/section4-background.jpg)] w-full h-[100%] bg-contain',
+      ]"
+      :data-rellax-speed="speed"
+      :data-rellax-percentage="0.5"
+    ></div> -->
   </div>
 </template>

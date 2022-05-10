@@ -3,10 +3,13 @@ import SectionBg from './SectionBg.vue';
 </script>
 
 <template>
-  <section id="section2" class="bg-transparent relative overflow-hidden">
+  <section
+    id="section2"
+    class="section2 bg-transparent relative h-[500px] overflow-hidden"
+  >
     <SectionBg id="2" speed="-10" />
 
-    <div class="container h-[500px] py-20 flex justify-between">
+    <div class="container py-20 flex justify-between">
       <div class="w-[200px] h-[200px] border border-light">item1</div>
       <div class="w-[200px] h-[200px] border border-light">item1</div>
       <div class="w-[200px] h-[200px] border border-light">item1</div>
