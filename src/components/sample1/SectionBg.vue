@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import Rellax from 'rellax';
 
 const props = defineProps(['id', 'speed']);
 
@@ -18,14 +17,8 @@ onMounted(() => {
     .map((el, idx) => (idx === 0 ? 0 : el.clientHeight));
   const topHeight = topList.reduce((pre, cur) => pre + cur, 0);
 
-  let rellax: any;
   window.addEventListener('scroll', () => {
-    if (rellax) return;
     if (window.scrollY > topHeight) {
-      rellax = new Rellax('.rellax' + props.id, {
-        wrapper: '#section' + props.id,
-        relativeToWrapper: true,
-      });
     }
   });
 });

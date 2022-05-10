@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionBg from './SectionBg.vue';
+import Parallax from './Parallax.vue';
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import SectionBg from './SectionBg.vue';
     id="section5"
     class="bg-transparent relative h-[500px] overflow-hidden"
   >
-    <!-- <SectionBg id="5" speed="5" /> -->
+    <Parallax :is-reverse="true" />
 
     <div class="container py-20 flex justify-between">
       <div class="w-[200px] h-[200px] border border-light">item1</div>
