@@ -33,6 +33,12 @@ const navItemList = [
     text: 'nav5',
     class: itemStyle,
   },
+  {
+    id: 'nav_link_6',
+    href: '#section6',
+    text: 'nav6',
+    class: itemStyle,
+  },
 ];
 const navRef = ref();
 
@@ -46,6 +52,13 @@ const onClick = (e: Event) => {
     el.href === current.href
       ? el.classList.add('active')
       : el.classList.remove('active');
+  });
+
+  const section = document.getElementById(current.href.split('#')[1]);
+  section!.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end',
+    inline: 'nearest',
   });
 };
 </script>
@@ -61,7 +74,7 @@ const onClick = (e: Event) => {
       :href="a.href"
       :key="a.id + '-' + index"
       :class="a.class"
-      @click="onClick"
+      @click.prevent="onClick"
       >{{ a.text }}</a
     >
     <!-- <div class="container flex flex-wrap justify-between items-center mx-auto">

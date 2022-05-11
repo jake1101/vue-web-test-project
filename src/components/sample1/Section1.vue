@@ -6,9 +6,11 @@
     class="top-0 w-full overflow-hidden"
     style="height: calc(100vh - 5rem)"
   >
-    <div class="container flex flex-col gap-40 py-52 items-center">
-      <div class="text-7xl font-black">Logo</div>
-      <div class="">
+    <div class="container h-full flex flex-col justify-evenly items-center">
+      <div class="text-7xl font-black bg-light/50 border border-primary">
+        <img src="@/assets/images/railroad-crossing.png" alt="logo" />
+      </div>
+      <div class="bg-light/50 border border-primary p-10">
         Enim ipsum ipsum amet aliqua incididunt velit nostrud pariatur esse
         adipisicing do dolore id. Eiusmod dolor ipsum sint eu. Quis voluptate eu
         Lorem et est laboris mollit. Non sint consequat adipisicing aliqua aute

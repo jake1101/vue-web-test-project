@@ -1,14 +1,4 @@
-<script setup lang="ts">
-import Rellax from 'rellax';
-import { onMounted } from 'vue';
-
-onMounted(() => {
-  new Rellax('.bg1', {
-    wrapper: '.wrap',
-    center: true,
-  });
-});
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="h-[10000px] m-[500px] border-[20px] border-red-800">

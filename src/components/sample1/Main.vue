@@ -6,6 +6,7 @@ import Section3 from './Section3.vue';
 import Section4 from './Section4.vue';
 import Section5 from './Section5.vue';
 import Section6 from './Section6.vue';
+
 function skipHeight(): number {
   return document.querySelector('nav')!.offsetHeight;
 }
@@ -16,8 +17,8 @@ function bgcMover(obj: any): Function {
   const mover = (): string => {
     const p = Math.floor(((y - ss) / se) * 100);
     const result = (he * p) / 100;
-    const speed = rvs ? 0.5 : 0.8;
-    const position = rvs ? `50% -${result * speed}px` : `50% ${result}px`;
+    const speed = 1;
+    const position = rvs ? `-${result * speed}px 50%` : `50% ${result}px`;
     return position;
   };
 
@@ -95,7 +96,6 @@ onMounted(function () {
     )!;
 
     document.querySelectorAll('a[id*="nav_link_"]').forEach((e) => {
-      console.log(activateNav);
       if (activateNav) {
         e === activateNav
           ? e.classList.add('active')

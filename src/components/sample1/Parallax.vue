@@ -15,7 +15,7 @@ defineProps(['isReverse']);
           { reverse: isReverse },
           {
             [isReverse
-              ? 'bg-[url(@/assets/images/section2-background.jpg)] bg-contain'
+              ? 'w-full bg-[url(@/assets/images/train-window.jpg)] bg-cover'
               : 'bg-secondary bg-[url(@/assets/images/railroad-crossing.png)] bg-auto']: true,
           },
           'w-full h-full',

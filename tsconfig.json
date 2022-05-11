@@ -5,9 +5,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["kakao.maps.d.ts"]
   },
-
   "references": [
     {
       "path": "./tsconfig.vite-config.json"

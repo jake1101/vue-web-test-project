@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Parallax from './Parallax.vue';
+import KakaoMap from '../KakaoMap.vue';
 </script>
 
 <template>
@@ -9,10 +10,8 @@ import Parallax from './Parallax.vue';
   >
     <Parallax />
 
-    <div class="container py-20 flex justify-between">
-      <div class="w-[200px] h-[200px] border border-light">item1</div>
-      <div class="w-[200px] h-[200px] border border-light">item1</div>
-      <div class="w-[200px] h-[200px] border border-light">item1</div>
+    <div class="container py-20 flex justify-between w-full h-full">
+      <KakaoMap />
     </div>
   </section>
 </template>
