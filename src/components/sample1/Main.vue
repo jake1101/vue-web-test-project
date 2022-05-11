@@ -123,6 +123,19 @@ onMounted(function () {
       <Section4 />
       <Section5 />
       <Section6 />
+      <div class="hidden">
+        undefined
+        <a
+          href="https://www.flaticon.com/authors/smashicons"
+          title="Smashicons"
+        >
+          Smashicons
+        </a>
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com'</a
+        >
+      </div>
     </div>
   </main>
 </template>

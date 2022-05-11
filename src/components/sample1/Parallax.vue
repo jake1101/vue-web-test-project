@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ChipIcon } from '@heroicons/vue/outline';
 const props = defineProps(['isReverse']);
 console.log(props.isReverse);
 </script>
@@ -17,7 +18,7 @@ console.log(props.isReverse);
           {
             [isReverse
               ? 'bg-[url(@/assets/images/section2-background.jpg)] bg-contain'
-              : 'bg-[url(@/assets/images/section4-background.jpg)] bg-contain']: true,
+              : 'bg-secondary bg-[url(@/assets/images/railroad-crossing.png)] bg-auto']: true,
           },
           'w-full h-full',
         ]"
