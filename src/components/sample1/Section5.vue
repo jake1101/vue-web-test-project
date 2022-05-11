@@ -7,6 +7,6 @@ import Parallax from './Parallax.vue';
     id="section5"
     class="bg-transparent relative h-[400px] overflow-hidden"
   >
-    <Parallax :is-reverse="true" />
+    <Parallax :is-horizon="true" />
   </section>
 </template>

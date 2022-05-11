@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps(['isReverse']);
+defineProps(['isHorizon']);
 </script>
 
 <template>
@@ -12,9 +12,9 @@ defineProps(['isReverse']);
       <div
         :class="[
           'parallax',
-          { reverse: isReverse },
+          { horizon: isHorizon },
           {
-            [isReverse
+            [isHorizon
               ? 'w-full bg-[url(@/assets/images/train-window.jpg)] bg-cover'
               : 'bg-secondary bg-[url(@/assets/images/railroad-crossing.png)] bg-auto']: true,
           },
