@@ -6,7 +6,7 @@ import KakaoMap from '../KakaoMap.vue';
 <template>
   <section
     id="section4"
-    class="bg-transparent relative h-[600px] overflow-hidden"
+    class="bg-transparent relative h-[800px] overflow-hidden"
   >
     <Parallax />
 

@@ -5,14 +5,14 @@ import Parallax from './Parallax.vue';
 <template>
   <section
     id="section6"
-    class="bg-transparent relative h-[900px] overflow-hidden"
+    class="bg-transparent relative h-[800px] overflow-hidden"
   >
     <Parallax />
 
-    <div class="container py-20 flex justify-between">
-      <div class="w-[200px] h-[200px] border border-light">item1</div>
-      <div class="w-[200px] h-[200px] border border-light">item1</div>
-      <div class="w-[200px] h-[200px] border border-light">item1</div>
+    <div class="container py-20 flex justify-center w-full h-full">
+      <div class="w-full max-w-[800px] h-full border border-light">
+        문의하세요
+      </div>
     </div>
   </section>
 </template>

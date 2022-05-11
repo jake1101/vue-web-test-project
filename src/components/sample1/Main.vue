@@ -12,13 +12,15 @@ function skipHeight(): number {
 }
 
 function bgcMover(obj: any): Function {
-  const { he, ss, se, rvs }: any = obj;
+  const { he, ss, se, horizon }: any = obj;
   const y = window.scrollY;
   const mover = (): string => {
     const p = Math.floor(((y - ss) / se) * 100);
     const result = (he * p) / 100;
     const speed = 1;
-    const position = rvs ? `-${result * speed}px 50%` : `50% ${result}px`;
+    const position = horizon
+      ? `-${result * speed}px 50%`
+      : `50% -${result * speed}px`;
     return position;
   };
 
@@ -66,8 +68,8 @@ onMounted(function () {
         window.innerHeight -
         skipHeight(),
       se: e.clientHeight + window.innerHeight - skipHeight(),
-      rvs: e.querySelector<HTMLElement>(
-        '.background_container .parallax:is(.reverse)'
+      horizon: e.querySelector<HTMLElement>(
+        '.background_container .parallax:is(.horizon)'
       )!
         ? true
         : false,
@@ -140,42 +142,3 @@ onMounted(function () {
     </div>
   </main>
 </template>
-
-<!-- <style scoped>
-main {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-}
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-}
-.container > div {
-  position: fixed;
-  top: calc(0 + 50px);
-  left: 0;
-  width: 100%;
-  min-width: 980px;
-  height: 100vh;
-  z-index: -2;
-}
-
-.container > div > img {
-  object-fit: cover;
-  width: inherit;
-  min-width: inherit;
-  height: inherit;
-  z-index: inherit;
-}
-
-.container > div::after {
-  all: inherit;
-  position: absolute;
-  top: 0;
-  background: linear-gradient(to top, #000, 40%, transparent);
-  z-index: 0;
-  content: '';
-}
-</style> -->

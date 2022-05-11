@@ -10,16 +10,26 @@
       <div class="text-7xl font-black bg-light/50 border border-primary">
         <img src="@/assets/images/railroad-crossing.png" alt="logo" />
       </div>
-      <div class="bg-light/50 border border-primary p-10">
-        Enim ipsum ipsum amet aliqua incididunt velit nostrud pariatur esse
-        adipisicing do dolore id. Eiusmod dolor ipsum sint eu. Quis voluptate eu
-        Lorem et est laboris mollit. Non sint consequat adipisicing aliqua aute
-        ullamco id commodo amet pariatur. Qui est consectetur ipsum sunt nostrud
-        quis id exercitation. Exercitation fugiat aute laboris anim irure dolor
-        minim culpa. In laboris ad non ut nisi exercitation et excepteur.
-        Aliquip pariatur excepteur do est esse amet mollit anim incididunt
-        cillum proident laboris ullamco nisi. Reprehenderit consequat pariatur
-        incididunt sunt sunt ipsum duis aute cillum.
+      <div>
+        <div class="bg-black/50 border border-primary border-b-8 p-4">
+          <h1 class="font-extrabold text-4xl text-center text-light">
+            Welcom to D-META
+          </h1>
+        </div>
+        <div class="bg-black/50 border border-primary p-4">
+          <p class="text-light">
+            Enim ipsum ipsum amet aliqua incididunt velit nostrud pariatur esse
+            adipisicing do dolore id. Eiusmod dolor ipsum sint eu. Quis
+            voluptate eu Lorem et est laboris mollit. Non sint consequat
+            adipisicing aliqua aute ullamco id commodo amet pariatur. Qui est
+            consectetur ipsum sunt nostrud quis id exercitation. Exercitation
+            fugiat aute laboris anim irure dolor minim culpa. In laboris ad non
+            ut nisi exercitation et excepteur. Aliquip pariatur excepteur do est
+            esse amet mollit anim incididunt cillum proident laboris ullamco
+            nisi. Reprehenderit consequat pariatur incididunt sunt sunt ipsum
+            duis aute cillum.
+          </p>
+        </div>
       </div>
     </div>
   </section>
