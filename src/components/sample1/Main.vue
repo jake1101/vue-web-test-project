@@ -95,10 +95,11 @@ onMounted(function () {
     )!;
 
     document.querySelectorAll('a[id*="nav_link_"]').forEach((e) => {
+      console.log(activateNav);
       if (activateNav) {
         e === activateNav
-          ? e.classList.add('activate')
-          : e.classList.remove('activate');
+          ? e.classList.add('active')
+          : e.classList.remove('active');
       }
     });
   };

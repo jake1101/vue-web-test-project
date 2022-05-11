@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { ChipIcon } from '@heroicons/vue/outline';
-const props = defineProps(['isReverse']);
-console.log(props.isReverse);
+defineProps(['isReverse']);
 </script>
 
 <template>

@@ -4,31 +4,31 @@ const itemStyle =
   'text-light text-xl  border-b border-transparent hover:text-tertiary hover:border-b hover:border-tertiary transition-color duration-200';
 const navItemList = [
   {
-    id: 'nav_1',
+    id: 'nav_link_1',
     href: '#section1',
     text: 'nav1',
-    class: itemStyle,
+    class: itemStyle + ' active',
   },
   {
-    id: 'nav_2',
+    id: 'nav_link_2',
     href: '#section2',
     text: 'nav2',
     class: itemStyle,
   },
   {
-    id: 'nav_3',
+    id: 'nav_link_3',
     href: '#section3',
     text: 'nav3',
     class: itemStyle,
   },
   {
-    id: 'nav_4',
+    id: 'nav_link_4',
     href: '#section4',
     text: 'nav4',
     class: itemStyle,
   },
   {
-    id: 'nav_5',
+    id: 'nav_link_5',
     href: '#section5',
     text: 'nav5',
     class: itemStyle,
