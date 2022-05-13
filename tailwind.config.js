@@ -13,6 +13,8 @@ module.exports = {
       },
       backgroundImage: {
         home: 'url("@/assets/images/home-background.jpg")',
+        pattern: 'url("@/assets/images/railroad-crossing.png")',
+        horizon: 'url("@/assets/images/train-window.jpg")',
       },
     },
   },

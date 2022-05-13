@@ -10,8 +10,14 @@ import KakaoMap from '../KakaoMap.vue';
   >
     <Parallax />
 
-    <div class="container py-20 flex justify-between w-full h-full">
-      <KakaoMap />
+    <div class="flex flex-col justify-between gap-20 h-full py-20">
+      <div>
+        <h2 class="font-extrabold text-4xl text-center text-light">SECTION4</h2>
+      </div>
+
+      <div class="container flex justify-between w-full h-full">
+        <KakaoMap />
+      </div>
     </div>
   </section>
 </template>

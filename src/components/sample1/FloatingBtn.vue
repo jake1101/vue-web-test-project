@@ -5,7 +5,9 @@ const isHidden = ref(true);
 
 const onClick = () => {
   isHidden.value = !isHidden.value;
-  isClicked.value = isHidden.value ? 'bg-secondary/80' : 'bg-tertiary/80';
+  // isClicked.value = isHidden.value ? 'bg-secondary/80' : 'bg-tertiary/80';
+
+  scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 };
 const btnStyle =
   'fixed bottom-3 right-3 text-light hover:bg-tertiary/80 transition-colors duration-200 rounded';
@@ -15,12 +17,12 @@ const containerStyle =
 
 <template>
   <div :class="[btnStyle, { [isClicked]: true }]" @click="onClick">
-    <button class="p-3">contact</button>
+    <button class="p-3">top</button>
   </div>
-  <div :class="[containerStyle, { hidden: isHidden }]">
+  <!-- <div :class="[containerStyle, { hidden: isHidden }]">
     <div class="flex justify-end">
       <button @click="onClick">닫기</button>
     </div>
     <div>문의하기 팝업</div>
-  </div>
+  </div> -->
 </template>

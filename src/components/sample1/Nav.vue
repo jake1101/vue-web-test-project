@@ -1,37 +1,36 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-const itemStyle =
-  'text-light text-xl  border-b border-transparent hover:text-tertiary hover:border-b hover:border-tertiary transition-color duration-200';
+
 const navItemList = [
   {
     id: 'nav_link_1',
     href: '#section1',
     text: 'nav1',
-    class: itemStyle + ' active',
+    class: 'nav-link nav-active',
   },
   {
     id: 'nav_link_2',
     href: '#section2',
     text: 'nav2',
-    class: itemStyle,
+    class: 'nav-link',
   },
   {
     id: 'nav_link_3',
     href: '#section3',
     text: 'nav3',
-    class: itemStyle,
+    class: 'nav-link',
   },
   {
     id: 'nav_link_4',
     href: '#section4',
     text: 'nav4',
-    class: itemStyle,
+    class: 'nav-link',
   },
   {
     id: 'nav_link_6',
     href: '#section6',
     text: 'nav5',
-    class: itemStyle,
+    class: 'nav-link',
   },
 ];
 const navRef = ref();
@@ -48,12 +47,25 @@ const onClick = (e: Event) => {
       : el.classList.remove('active');
   });
 
-  const section = document.getElementById(current.href.split('#')[1]);
-  section!.scrollIntoView({
+  const curSec = document.getElementById(
+    current.href.split('#')[1]
+  ) as HTMLElement;
+
+  const { y } = curSec.getBoundingClientRect();
+  const sy = scrollY - document.querySelector('header')!.offsetHeight;
+  const add = curSec.id === 'section1' ? 0 : 2;
+  scrollTo({
+    top: y + sy + add,
+    left: 0,
     behavior: 'smooth',
-    block: 'start',
-    inline: 'nearest',
   });
+
+  // const section = document.getElementById(current.href.split('#')[1]);
+  // section!.scrollIntoView({
+  //   behavior: 'smooth',
+  //   block: 'start',
+  //   inline: 'nearest',
+  // });
 };
 </script>
 
