@@ -16,6 +16,16 @@ module.exports = {
         pattern: 'url("@/assets/images/railroad-crossing.png")',
         horizon: 'url("@/assets/images/train-window.jpg")',
       },
+
+      animation: {
+        zoom: 'zoom 3s ease-in-out infinite',
+      },
+      keyframes: {
+        zoom: {
+          '100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
+        },
+      },
     },
   },
   plugins: [],

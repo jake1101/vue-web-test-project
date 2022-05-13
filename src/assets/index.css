@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.hover-animation {
+  @apply hover:skew-y-3;
+}
+
 .nav-link {
   @apply text-light text-xl  border-b border-transparent hover:text-tertiary hover:border-b hover:border-tertiary transition-colors duration-200;
 }

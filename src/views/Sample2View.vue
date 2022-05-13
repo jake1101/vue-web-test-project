@@ -1,17 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from '@/components/sample2/Header.vue';
+import AnimationSection from '@/components/sample2/AnimationSection.vue';
+import Main from '@/components/sample2/Main.vue';
+import Footer from '@/components/sample2/Footer.vue';
+</script>
 
 <template>
-  <div class="h-[10000px] m-[500px] border-[20px] border-red-800">
-    <div
-      class="wrap border-[10px] relative w-full h-[500px] top-[0] overflow-scroll"
-    >
-      <div class="h-[500%]">
-        <div
-          class="bg1 w-[10%] h-[10%] bg-[url(@/assets/images/section4-background.jpg)] bg-contain"
-          :data-rellax-speed="-10"
-        ></div>
-        resfs
-      </div>
-    </div>
-  </div>
+  <Header />
+  <AnimationSection />
+  <Main />
+  <Footer />
 </template>
