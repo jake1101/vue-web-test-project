@@ -1,4 +1,5 @@
 <script setup lang="ts"></script>
 <template>
-  <main></main>
+  <main class="h-[10000px]">
+  </main>
 </template>

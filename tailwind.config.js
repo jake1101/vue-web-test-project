@@ -18,12 +18,12 @@ module.exports = {
       },
 
       animation: {
-        zoom: 'zoom 3s ease-in-out infinite',
+        zoom: 'zoom 5s infinite alternate',
       },
       keyframes: {
         zoom: {
-          '100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.1)' },
+          'from': { transform: 'translateZ(80px)' },
+          'to': { transform: 'translateZ(60px)' },
         },
       },
     },
