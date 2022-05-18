@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.hover-animation {
-  @apply hover:skew-y-3;
-}
-
 .nav-link {
   @apply text-light text-xl  border-b border-transparent hover:text-tertiary hover:border-b hover:border-tertiary transition-colors duration-200;
 }
@@ -20,4 +16,13 @@
 
 .service-item-alpha {
   @apply text-light w-full h-full absolute top-0 left-0 bg-transparent hover:cursor-pointer hover:bg-secondary/30 hover:bg-gradient-to-br hover:from-primary/80 hover:to-secondary/80 transition-colors duration-200 hover:after:content-['Detail'] hover:after:text-3xl hover:after:font-bold hover:after:w-full hover:after:flex hover:after:justify-center hover:after:align-middle hover:after:absolute hover:after:top-[50%] hover:after:translate-y-[-50%] hover:after:left-0;
+}
+/* sample1 */
+
+.card-img-translate {
+  @apply translate-x-10 transition-all duration-1000;
+}
+
+.card-img-translate.isReverse {
+  @apply -translate-x-10;
 }
