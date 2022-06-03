@@ -15,11 +15,7 @@ import Parallax from './Parallax.vue';
         <h2 class="font-extrabold text-4xl text-center text-light">SECTION6</h2>
       </div>
 
-      <div class="container flex justify-center w-full h-full">
-        <div class="w-full max-w-[800px] h-full border border-light">
-          문의하세요
-        </div>
-      </div>
+      <div class="container flex justify-center w-full h-full"></div>
     </div>
   </section>
 </template>

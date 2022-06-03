@@ -5,6 +5,8 @@
 <template>
   <main>
     <!-- <TheWelcome /> -->
-    this is Home
+    <div class="w-full h-full absolute flex justify-center items-center">
+      <img src="@/assets/images/underConstructor.jpg" alt="underConstructor" />
+    </div>
   </main>
 </template>
